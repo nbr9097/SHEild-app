@@ -1,0 +1,6 @@
+fastapi
+tensorflow==2.17.1
+librosa
+uvicorn
+python-multipart
+numpy

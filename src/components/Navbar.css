@@ -1,0 +1,33 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 20px;
+  }  
+  .navbar-logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+  .navbar-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #ff4081; /* pink on hover */
+  }
+  
