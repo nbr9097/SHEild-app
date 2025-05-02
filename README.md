@@ -24,9 +24,25 @@ To develop a machine learning model that accurately detects distress in voice re
 
 ---
 
+## 🖼️ Screenshots
+
+### 🏠 Homepage
+![HOMEPAGE](https://github.com/user-attachments/assets/0424a100-e18a-4ccf-9857-a5479cf1cd58)
+
+
+### ✅ Non-Distress Audio Prediction
+![RESULT NO DISTRESS](https://github.com/user-attachments/assets/ba3be333-3051-4a6d-a48d-02cc32988a2a)
+
+
+### 🚨 Distress Audio Prediction
+![RESULT DISTRESS](https://github.com/user-attachments/assets/ab9bcef6-f75c-41a7-b3ed-d213669941ea)
+
+
+---
+
 ## 🧪 Datasets
 
-- [CREMA-D](https://zenodo.org/record/3816440)
+- [CREMA-D](https://paperswithcode.com/dataset/crema-d)
 - [RAVDESS](https://zenodo.org/record/1188976)
 - [TESS](https://tspace.library.utoronto.ca/handle/1807/24487)
 
