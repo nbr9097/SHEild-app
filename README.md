@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# 🎙️ SHEild – Voice-Based Distress Detection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**SHEild** is a deep learning–powered voice distress detection system developed as a Master's final year project to enhance real-time safety applications. The model is capable of identifying distress in human speech using audio features extracted from publicly available emotional speech datasets.
 
-## Available Scripts
+> 🧠 Built using CNN-BiLSTM architecture  
+> 🎯 Accuracy: 82.78% on test data  
+> 📁 Datasets used: CREMA-D, RAVDESS, TESS  
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Objective
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To develop a machine learning model that accurately detects distress in voice recordings, especially for use in emergency and women’s safety contexts, even when the speaker cannot trigger a manual alert.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🔍 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Binary classification: **Distress** vs **Not Distress**
+- MFCC-based audio feature extraction
+- CNN-BiLSTM model for capturing spatial and temporal features
+- Evaluation using accuracy, precision, recall, F1-score, and ROC-AUC
+- Trained on ~7000 curated samples
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧪 Datasets
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [CREMA-D](https://zenodo.org/record/3816440)
+- [RAVDESS](https://zenodo.org/record/1188976)
+- [TESS](https://tspace.library.utoronto.ca/handle/1807/24487)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+These datasets cover a wide range of emotions and speakers, with a focus on distress-related emotional patterns.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ⚙️ Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Python**
+- **TensorFlow/Keras**
+- **Librosa** for audio preprocessing
+- **Scikit-learn** for evaluation
+- **Matplotlib/Seaborn** for visualization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧩 Model Architecture
 
-## Learn More
+A hybrid **CNN-BiLSTM** model:
+- CNN layers: Extract frequency-domain features from MFCC spectrograms.
+- BiLSTM layers: Capture time-dependent emotional variations.
+- Dropout and regularization to reduce overfitting.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📈 Results
 
-### Code Splitting
+| Metric     | Distress | Not Distress |
+|------------|----------|--------------|
+| Precision  | 0.82     | 0.83         |
+| Recall     | 0.59     | 0.94         |
+| F1-Score   | 0.69     | 0.88         |
+| Accuracy   | **82.78%** overall     |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **AUC-ROC**: High area under curve indicating good class separation.
+- **Confusion Matrix**: Visualized and analyzed for false positives/negatives.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧪 How to Run
 
-### Making a Progressive Web App
+```bash
+# Clone the repository
+git clone https://github.com/nbr9097/SHEild-app.git
+cd SHEild-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Install required libraries
+pip install -r requirements.txt
 
-### Advanced Configuration
+# Run the Jupyter Notebook
+jupyter notebook FinalSHEild.ipynb
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```plaintext
+SHEild-app/
+├── FinalSHEild.ipynb        # Main notebook with model, preprocessing, and evaluation
+├── data/                    # Placeholder for dataset
+├── models/                  # Saved model checkpoints
+├── README.md
+└── requirements.txt
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📌 Future Enhancements
+
+- Expand dataset with real-world audio
+- Integrate Transformer or attention mechanisms
+- Deploy as a mobile app or web API
+- Add real-time noise filtering and multilingual support
+
+---
+
+## 📜 License
+
+This project is for academic and research purposes. For commercial use, please contact the author.
+
+---
+
+## 👩‍💻 Author
+
+**Noof Abdul Raheem A P**  
+Master of Computer Science, St. Joseph’s College (Autonomous), Devagiri  
+📧 [GitHub Profile](https://github.com/nbr9097)
